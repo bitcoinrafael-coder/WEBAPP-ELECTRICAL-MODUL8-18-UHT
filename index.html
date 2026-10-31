@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shipboard Electrical M8–M18 | UHT TRPK</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eaf0f4;--sf:#fff;--ink:#0f2a43;--mut:#4d6478;--ac:#0e7c86;--br:#b8780a;--ln:#c9d6df;--nav:#0f2a43;--navt:#eaf0f4;--ok:#1d7a46;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 120px);color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1b2b;--sf:#12283d;--ink:#e6eef5;--mut:#9db3c4;--ac:#4fc3cd;--br:#e3a93a;--ln:#26425c;--nav:#071420;--navt:#e6eef5;--ok:#5fcf8c}}
+:root[data-theme="dark"]{--bg:#0b1b2b;--sf:#12283d;--ink:#e6eef5;--mut:#9db3c4;--ac:#4fc3cd;--br:#e3a93a;--ln:#26425c;--nav:#071420;--navt:#e6eef5;--ok:#5fcf8c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:Bitter,Georgia,serif;line-height:1.25;margin:0 0 .5em}
+a{color:var(--ac)}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--nav);color:var(--navt);padding:8px 14px;border-bottom:3px solid var(--br)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--nav);z-index:30}
+.nav .row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.nav b{font-family:Bitter,serif;margin-right:8px}
+.nav a,.nav button{color:var(--navt);background:transparent;border:1px solid #ffffff44;border-radius:6px;padding:4px 10px;font:inherit;font-size:14px;cursor:pointer;text-decoration:none}
+.nav a:hover,.nav button:hover,.nav .on{background:var(--br);border-color:var(--br);color:#fff}
+.nav .r2{margin-top:6px}
+main{max-width:1060px;margin:0 auto;padding:18px 14px 60px}
+.hero{border-left:6px solid var(--br);padding:6px 0 6px 16px;margin:10px 0 18px}
+.hero h1{font-size:clamp(1.6rem,4vw,2.4rem)}
+.hero p{color:var(--mut);max-width:70ch;margin:0}
+.tab{display:none}.tab.on{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:10px;padding:14px;cursor:pointer;text-align:left;color:inherit;font:inherit}
+.card:hover{border-color:var(--ac)}
+.card small{color:var(--br);font-weight:600}
+.card h3{font-size:1.05rem;margin:.2em 0}
+.card p{margin:0;color:var(--mut);font-size:.93rem}
+.box{background:var(--sf);border:1px solid var(--ln);border-radius:10px;padding:16px;margin-bottom:14px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{border:1px solid var(--ln);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--nav);color:var(--navt)}
+.chip{display:inline-block;background:var(--ac);color:#fff;border-radius:99px;padding:2px 11px;margin:2px 4px 2px 0;font-size:.85rem;text-decoration:none}
+.chip.y{background:#b3261e}.chip.w{background:#555}.chip.i{background:var(--br)}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.flow span{background:var(--ac);color:#fff;border-radius:6px;padding:4px 10px;font-weight:600}
+.modal{position:fixed;inset:0;background:#000a;display:none;z-index:50;padding:calc(env(safe-area-inset-top,0px) + 10px) 10px 10px;overflow:auto}
+.modal.on{display:block}
+.pop{background:var(--sf);color:var(--ink);max-width:820px;margin:0 auto;border-radius:12px;padding:18px;border-top:5px solid var(--br)}
+.pop h2{font-size:1.4rem}.pop h4{margin:1em 0 .3em;color:var(--ac);font-family:Bitter,serif}
+.pop ul{margin:.2em 0;padding-left:1.2em}
+.x{float:right;background:var(--nav);color:var(--navt);border:0;border-radius:6px;padding:4px 12px;cursor:pointer;font:inherit}
+.f{background:var(--bg);border-left:4px solid var(--br);padding:6px 10px;margin:4px 0;font-family:Consolas,monospace;font-size:.92rem;overflow-x:auto}
+input[type=text],select{font:inherit;padding:7px 10px;border:1px solid var(--ln);border-radius:6px;background:var(--bg);color:var(--ink);width:100%;max-width:420px}
+label.ck{display:block;padding:3px 0}
+.score{font-size:1.3rem;font-weight:700;color:var(--ok)}
+:focus-visible{outline:3px solid var(--br);outline-offset:2px}
+</style>
+</head>
+<body>
+<header class="nav">
+<div class="row"><b>⚓ Shipboard Electrical M8–M18</b>
+<button data-t="beranda" class="on">Modul</button><button data-t="rps">RPS</button><button data-t="silabus">Silabus</button><button data-t="lesson">Lesson Plan</button><button data-t="tot">TOT 6.09</button><button data-t="ref">IMO &amp; STCW</button><button id="cari">🔎 Cari cepat</button></div>
+<div class="row r2"><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=generator+kapal+marine+electrical">YouTube</a><a target="_blank" rel="noopener" href="https://www.google.com/search?q=shipboard+electrical+system+generator">Google</a><a target="_blank" rel="noopener" href="https://id.wikipedia.org/wiki/Generator_listrik">Wikipedia</a><a target="_blank" rel="noopener" href="https://www.imo.org/en/OurWork/HumanElement/Pages/ModelCourses.aspx">IMO Model Courses</a><a target="_blank" rel="noopener" href="https://www.imo.org/en/OurWork/HumanElement/Pages/STCW-Convention.aspx">STCW</a><a target="_blank" rel="noopener" href="https://phet.colorado.edu/en/simulations/generator">Animasi PhET</a><a target="_blank" rel="noopener" href="https://www.falstad.com/circuit/">Simulator Rangkaian</a><button id="tema">◐ Tema</button></div>
+</header>
+<main>
+<section id="beranda" class="tab on">
+<div class="hero"><h1>Dari induksi ke generator kapal</h1><p>Materi Modul 8–18, Sistem Kelistrikan Kapal Dasar, Universitas Hang Tuah Surabaya, TRPK semester 3 (3 SKS). Studi kasus MV Baabullah 50K DWT Bulk Carrier. Klik kartu modul untuk membuka penjelasan, fungsi di kapal, hasil belajar Taruna, dan tautan belajar.</p></div>
+<div class="grid" id="cards"></div>
+<div class="box" style="margin-top:16px"><b>Alur wajib tiap modul:</b><div class="flow" style="margin-top:6px"><span>MATERI</span>→<span>ANALISIS</span>→<span>TROUBLESHOOTING</span>→<span>KESIMPULAN</span>→<span>SOLUSI</span></div></div>
+</section>
+
+<section id="rps" class="tab">
+<div class="hero"><h1>Rencana Pembelajaran Semester</h1><p>Rancangan RPS M8–M18. Kode MK, CPL resmi, dan format pengesahan perlu dicocokkan dengan template TRPK UHT.</p></div>
+<div class="box tw"><table><tr><th>Komponen</th><th>Keterangan</th></tr><tr><td>Perguruan tinggi / Prodi</td><td>Universitas Hang Tuah Surabaya / TRPK</td></tr><tr><td>Mata kuliah</td><td>Sistem Kelistrikan Kapal Dasar (Shipboard Electrical System), semester 3, 3 SKS</td></tr><tr><td>Dosen pengampu</td><td>Rafael Sukirno, CE</td></tr><tr><td>Tahun akademik</td><td>2026/2027 · UTS minggu 9 · UAS minggu 18</td></tr><tr><td>Beban belajar</td><td>3 SKS × 45 jam = 135 jam/semester: terbimbing 45, terstruktur 45, mandiri 45 (untuk seluruh M1–M18)</td></tr></table></div>
+<div class="box tw"><h3>Rencana mingguan</h3><table id="tbRps"><tr><th>Mgg</th><th>Materi</th><th>Indikator</th><th>Metode</th><th>Penilaian</th></tr></table></div>
+<div class="box tw"><h3>Penilaian</h3><table><tr><th>Komponen</th><th>Bobot</th></tr><tr><td>Kehadiran dan partisipasi</td><td>10%</td></tr><tr><td>Kuis dan tugas individu</td><td>10%</td></tr><tr><td>Diskusi dan presentasi</td><td>15%</td></tr><tr><td>Praktik dan worksheet</td><td>15%</td></tr><tr><td>UTS</td><td>20%</td></tr><tr><td>UAS</td><td>30%</td></tr><tr><th>Total</th><th>100%</th></tr></table><p style="color:var(--mut)">Bobot akhir mengikuti kebijakan akademik UHT.</p></div>
+</section>
+
+<section id="silabus" class="tab">
+<div class="hero"><h1>Silabus</h1><p>Capaian pembelajaran dan bahan kajian M8–M18.</p></div>
+<div class="box"><h3>CPL yang dikontribusi</h3><ul><li><b>CPL-S1 Sikap:</b> profesional, disiplin, mengutamakan keselamatan.</li><li><b>CPL-P1 Pengetahuan:</b> kelistrikan, elektromagnetik, pembangkitan, mesin listrik kapal.</li><li><b>CPL-KU1 Keterampilan umum:</b> analisis logis berdasarkan teori dan data.</li><li><b>CPL-KK1 Keterampilan khusus:</b> identifikasi, hitungan dasar, analisis awal generator.</li></ul></div>
+<div class="box tw"><h3>CPMK</h3><table><tr><th>Kode</th><th>Capaian</th></tr><tr><td>CPMK-1</td><td>Menjelaskan induksi elektromagnetik (Faraday, Lenz).</td></tr><tr><td>CPMK-2</td><td>Menjelaskan usaha, energi, daya dan penerapannya di kapal.</td></tr><tr><td>CPMK-3</td><td>Menghitung daya dan energi listrik 1 fase dan 3 fase.</td></tr><tr><td>CPMK-4</td><td>Menjelaskan definisi, jenis, fungsi, prinsip kerja generator.</td></tr><tr><td>CPMK-5</td><td>Menjelaskan generator AC: putaran, kutub, frekuensi.</td></tr><tr><td>CPMK-6</td><td>Mengidentifikasi komponen generator AC.</td></tr><tr><td>CPMK-7</td><td>Menjelaskan generator DC dan komponennya.</td></tr><tr><td>CPMK-8</td><td>Membandingkan generator AC dan DC.</td></tr><tr><td>CPMK-9</td><td>Menghubungkan pembangkitan, distribusi, kebutuhan energi kapal dengan keselamatan kerja.</td></tr></table></div>
+<div class="box"><h3>Media dan alat</h3><p>Proyektor, SLD kapal, gambar rotor-stator, multimeter, clamp meter, insulation tester, oscilloscope, power analyzer, generator trainer, simulasi PhET. Alat praktik dipakai sesuai manual dan pengawasan instruktur. Spesifikasi aktual kapal harus diverifikasi dari manual pabrikan dan SLD.</p></div>
+<div class="box"><h3>Ujian</h3><p><b>UTS (M9):</b> M1–M8, pilihan ganda, hitungan, kasus. <b>UAS (M18):</b> M8 dan M10–M17, teori, hitungan, identifikasi komponen, studi kasus kapal.</p></div>
+</section>
+
+<section id="lesson" class="tab">
+<div class="hero"><h1>Lesson Plan 150 menit</h1><p>Pilih modul untuk melihat rencana pertemuan lengkap.</p></div>
+<div class="box"><select id="selLp" aria-label="Pilih modul"></select></div>
+<div id="lpOut"></div>
+</section>
+
+<section id="tot" class="tab">
+<div class="hero"><h1>TOT 6.09 dan micro teaching</h1><p>Berdasarkan IMO Model Course 6.09 (Training Course for Instructors): rencanakan sesi, sampaikan, nilai, dan perbaiki.</p></div>
+<div class="grid">
+<div class="box"><h3>Pedagogi</h3><p>Dosen memberi teori, rumus, dan demonstrasi komponen.</p></div>
+<div class="box"><h3>Andragogi</h3><p>Taruna menganalisis masalah operasional kapal, misalnya tegangan generator turun.</p></div>
+<div class="box"><h3>Heutagogi</h3><p>Taruna mencari referensi sendiri, menyusun analisis, lalu presentasi.</p></div></div>
+<div class="box tw"><h3>Struktur micro teaching 10 menit</h3><table><tr><th>Menit</th><th>Kegiatan</th><th>Contoh pada M14</th></tr><tr><td>0–1</td><td>Pembuka dan tujuan</td><td>"Mengapa listrik kapal 60 Hz?"</td></tr><tr><td>1–4</td><td>Konsep inti + media</td><td>Rumus f = P·N/120, gambar rotor</td></tr><tr><td>4–7</td><td>Aktivitas Taruna</td><td>Hitung f untuk 6 kutub, 1200 rpm</td></tr><tr><td>7–9</td><td>Cek pemahaman</td><td>Tanya jawab: bila rpm turun?</td></tr><tr><td>9–10</td><td>Penutup dan tindak lanjut</td><td>Kaitkan ke governor dan AVR</td></tr></table></div>
+<div class="box"><h3>Rubrik observasi (centang yang terlihat)</h3><div id="rub"></div><p>Skor: <span class="score" id="sc">0</span> / 10</p></div>
+</section>
+
+<section id="ref" class="tab">
+<div class="hero"><h1>Acuan IMO dan STCW</h1><p>Pemetaan umum. Rujuk teks resmi STCW Code dan Model Course edisi terbaru sebelum dikutip di dokumen akademik.</p></div>
+<div class="box tw"><table><tr><th>Acuan</th><th>Relevansi untuk M8–M18</th></tr><tr><td>STCW Code Tabel A-III/1 (perwira jaga mesin)</td><td>Fungsi "Electrical, electronic and control engineering at the operational level": pengoperasian sistem listrik, generator, dan pemeliharaan peralatan listrik.</td></tr><tr><td>STCW Code Tabel A-III/6 (Electro-Technical Officer)</td><td>Pemantauan operasi sistem listrik, elektronik, kontrol, serta pemeliharaan dan perbaikan. M8–M18 menjadi fondasi, bukan pengganti pelatihan ETO.</td></tr><tr><td>IMO Model Course 7.04</td><td>Officer in Charge of an Engineering Watch: dasar kelistrikan dan mesin listrik.</td></tr><tr><td>IMO Model Course 7.08</td><td>Electro-Technical Officer: teori elektro, generator, distribusi.</td></tr><tr><td>IMO Model Course 6.09</td><td>Training Course for Instructors: rencana sesi, metode, penilaian, micro teaching.</td></tr><tr><td>SOLAS Bab II-1 (instalasi listrik)</td><td>Sumber daya utama dan darurat kapal; acuan fungsi generator utama dan emergency.</td></tr></table></div>
+<div class="box"><h3>Tautan resmi dan belajar</h3><a class="chip i" target="_blank" rel="noopener" href="https://www.imo.org/en/OurWork/HumanElement/Pages/ModelCourses.aspx">IMO Model Courses</a><a class="chip i" target="_blank" rel="noopener" href="https://www.imo.org/en/OurWork/HumanElement/Pages/STCW-Convention.aspx">STCW Convention</a><a class="chip i" target="_blank" rel="noopener" href="https://www.google.com/search?q=IMO+model+course+7.08+electro-technical+officer">Model Course 7.08</a><a class="chip i" target="_blank" rel="noopener" href="https://www.google.com/search?q=IMO+model+course+6.09+training+course+for+instructors">Model Course 6.09</a><a class="chip y" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=marine+alternator+working+ship">YouTube alternator kapal</a><a class="chip" target="_blank" rel="noopener" href="https://phet.colorado.edu/en/simulations/faradays-law">PhET Faraday</a><a class="chip" target="_blank" rel="noopener" href="https://phet.colorado.edu/en/simulations/generator">PhET Generator</a><a class="chip w" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Alternator">Wikipedia Alternator</a></div>
+</section>
+</main>
+
+<div class="modal" id="m"><div class="pop" id="pop"></div></div>
+<div class="modal" id="q"><div class="pop"><button class="x" data-close>Tutup</button><h2>Cari cepat</h2><p>Ketik istilah, lalu pilih tujuan.</p><input type="text" id="qi" placeholder="contoh: generator sinkron" aria-label="Istilah"><div id="qo" style="margin-top:12px"></div></div></div>
+
+<script>
+const L=(t,q)=>({
+y:"https://www.youtube.com/results?search_query="+encodeURIComponent(q),
+g:"https://www.google.com/search?q="+encodeURIComponent(q),
+w:"https://id.wikipedia.org/w/index.php?search="+encodeURIComponent(t),
+e:"https://en.wikipedia.org/w/index.php?search="+encodeURIComponent(q),
+i:"https://www.google.com/search?q="+encodeURIComponent("IMO model course "+q),
+s:"https://www.google.com/search?q="+encodeURIComponent("STCW A-III/1 A-III/6 "+q)});
+const M=[
+{n:8,w:8,t:"Induksi Elektromagnetik",s:"Faraday, Lenz, aplikasi pada generator",q:"electromagnetic induction Faraday Lenz generator ship",wk:"Induksi elektromagnetik",
+def:"Induksi elektromagnetik adalah timbulnya tegangan (GGL) pada penghantar atau kumparan ketika fluks magnet yang melingkupinya berubah terhadap waktu.",
+det:["Fluks magnet Φ = B·A·cosθ, satuan weber (Wb).","Hukum Faraday: GGL induksi sebanding dengan laju perubahan fluks.","Hukum Lenz: arah arus induksi melawan penyebab perubahannya (tanda minus pada rumus).","Cara mengubah fluks: gerakkan magnet, putar kumparan, atau ubah arus pada kumparan lain.","Penghantar bergerak memotong medan: e = B·l·v."],
+f:["ε = −N·(dΦ/dt)","e = B·l·v·sinθ"],
+k:["Alternator ADG dan emergency generator: rotor berputar, stator menghasilkan tegangan.","Transformator distribusi 440 V ke 220 V lewat induksi bersama.","Clamp meter mengukur arus tanpa memutus rangkaian.","Motor berputar menimbulkan GGL balik yang membatasi arus."],
+tr:["Menjelaskan mengapa putaran mesin penggerak menentukan tegangan generator.","Memakai tanda minus Lenz untuk memprediksi arah arus.","Menghitung GGL sederhana dari B, l, v."],
+ak:"Demo magnet-kumparan dan PhET Faraday: Taruna memprediksi arah jarum galvanometer.",as:"Kuis 10 soal + worksheet arah arus",yt:"Faraday law of induction animation"},
+{n:9,w:9,t:"Ujian Tengah Semester",s:"Evaluasi M1–M8",q:"ohm law kirchhoff impedance AC power",wk:"Hukum Ohm",
+def:"Evaluasi capaian M1–M8: Hukum Ohm, hambatan, Kirchhoff, impedansi, induktansi, arus AC, daya, dan induksi elektromagnetik.",
+det:["Bentuk soal: pilihan ganda, hitungan, analisis kasus kelistrikan kapal.","Susun kisi-kisi per CPMK agar soal terukur.","Gunakan data kapal sederhana (motor, lampu, panel) sebagai konteks."],
+f:["V = I·R","P = V·I"],k:["Soal kasus: arus beban panel dan jatuh tegangan kabel."],
+tr:["Mengintegrasikan teori dasar sebelum masuk mesin listrik."],ak:"Ujian tertulis 90 menit, lalu pembahasan soal.",as:"UTS 20%",yt:"Ohm law Kirchhoff explained"},
+{n:10,w:10,t:"Usaha, Energi, dan Daya",s:"Beda dan hubungan ketiganya",q:"work energy power physics electrical",wk:"Daya (fisika)",
+def:"Usaha adalah gaya dikali perpindahan. Energi adalah kemampuan melakukan usaha. Daya adalah laju usaha atau energi per satuan waktu.",
+det:["Usaha W = F·s, satuan joule (J).","Energi satuan joule; listrik memakai kWh, 1 kWh = 3,6 MJ.","Daya P = W/t, satuan watt (W) atau kW.","Usaha dan energi 'jumlah', daya 'kecepatan'. Dua pompa bisa memindahkan air sama banyak, tetapi yang berdaya besar lebih cepat.","Efisiensi η = daya keluaran / daya masukan."],
+f:["W = F·s","P = W/t","η = Pout/Pin"],
+k:["Pompa ballast: daya listrik motor menjadi energi hidrolik air.","Winch dan crane: daya menentukan kecepatan angkat.","Generator ADG menyuplai kW, mesin diesel menyuplai daya mekanik (kW poros)."],
+tr:["Membedakan J, W, dan kWh dengan contoh kapal.","Menghitung efisiensi motor-pompa sederhana."],
+ak:"Studi kasus pompa kapal: bandingkan dua pompa dengan daya berbeda.",as:"Tugas individu",yt:"work energy power difference"},
+{n:11,w:11,t:"Persamaan Energi dan Daya Listrik",s:"Turunan rumus dan perhitungan",q:"electrical power energy calculation three phase kW kWh",wk:"Daya listrik",
+def:"Daya listrik adalah laju penggunaan energi listrik. Energi listrik adalah daya dikali lama pemakaian.",
+det:["Turunan: P = V·I; substitusi V = I·R memberi P = I²R; substitusi I = V/R memberi P = V²/R.","1 fase AC: P = V·I·cosφ.","3 fase seimbang: P = √3·VL·IL·cosφ.","Energi E = P·t. Biaya bahan bakar ADG berkaitan dengan kWh yang dihasilkan.","Contoh: motor 440 V, 30 A, cosφ 0,8: P = 1,732×440×30×0,8 ≈ 18,3 kW. Jalan 8 jam: E ≈ 146 kWh."],
+f:["P = V·I = I²R = V²/R","P3φ = √3·VL·IL·cosφ","E = P·t"],
+k:["Menyusun electrical load balance: total kW beban pada kondisi berlayar, bongkar muat, manuver.","Menentukan berapa ADG harus dijalankan.","Membaca kW dan A pada papan switchboard."],
+tr:["Menghitung daya dan energi beban kapal 1 dan 3 fase.","Menyusun tabel beban sederhana."],
+ak:"Problem-Based Learning: hitung total beban 5 motor kapal dan putuskan jumlah ADG.",as:"Tes perhitungan",yt:"three phase power calculation"},
+{n:12,w:12,t:"Generator: Definisi, Jenis, Prinsip",s:"Konversi energi mekanik ke listrik",q:"electric generator types working principle",wk:"Generator listrik",
+def:"Generator adalah mesin yang mengubah energi mekanik menjadi energi listrik melalui induksi elektromagnetik.",
+det:["Tiga syarat: medan magnet, penghantar, gerak relatif.","Jenis menurut keluaran: generator AC (alternator) dan generator DC.","Generator AC: sinkron (dipakai di kapal) dan asinkron (induksi).","Generator DC: penguatan terpisah, shunt, seri, kompound.","Rantai energi kapal: bahan bakar → mesin diesel → generator → switchboard → beban."],
+f:["E ≈ k·Φ·n (GGL sebanding fluks dan putaran)"],
+k:["Main/auxiliary generator (ADG) dan emergency generator.","Shaft generator pada beberapa kapal.","Alternator kecil pada genset darurat dan sekoci."],
+tr:["Menjelaskan alur konversi energi dari BBM sampai beban.","Mengelompokkan jenis generator."],
+ak:"Visualisasi alur energi pada SLD MV Baabullah; kuis identifikasi jenis.",as:"Kuis dan identifikasi",yt:"how generator works animation"},
+{n:13,w:13,t:"Fungsi dan Pengembangan Generator",s:"Eksitasi, AVR, governor, paralel",q:"ship generator AVR governor paralel emergency generator",wk:"Automatic voltage regulator",
+def:"Generator kapal harus menyediakan daya yang stabil: tegangan diatur AVR, frekuensi diatur governor mesin penggerak.",
+det:["Fungsi: sumber daya utama, cadangan, dan darurat.","AVR mengatur arus eksitasi untuk menjaga tegangan.","Governor mengatur bahan bakar untuk menjaga rpm, sehingga frekuensi.","Paralel generator: samakan tegangan, frekuensi, urutan fase, dan sudut fase (sinkron).","Emergency generator harus start otomatis dan menyuplai beban penting dalam batas waktu yang ditetapkan SOLAS (verifikasi aturan terbaru).","Pengembangan: brushless excitation, PMS, shaft generator, diesel-electric, hybrid baterai."],
+f:["f = P·N/120","Pembagian beban ∝ droop governor"],
+k:["Blackout: emergency generator start dan hidupkan emergency switchboard.","Tegangan tidak stabil: periksa AVR, eksitasi, beban reaktif.","Frekuensi turun: periksa governor dan kelebihan beban."],
+tr:["Membedakan peran AVR dan governor.","Menyebutkan syarat paralel generator.","Menyusun urutan analisis gangguan tegangan."],
+ak:"Kasus: tegangan generator turun saat motor besar start. MATERI→ANALISIS→TROUBLESHOOTING→SOLUSI.",as:"Analisis kasus",yt:"synchronizing generators ship switchboard"},
+{n:14,w:14,t:"Generator AC: Definisi dan Prinsip",s:"Alternator, rpm, kutub, frekuensi",q:"synchronous alternator working principle frequency poles rpm",wk:"Alternator",
+def:"Generator AC (alternator) menghasilkan tegangan bolak-balik. Pada alternator sinkron, medan di rotor berputar memotong belitan stator.",
+det:["Tiga belitan stator berjarak 120° menghasilkan sistem tegangan 3 fase.","Frekuensi f = P·N/120 (P jumlah kutub, N rpm).","Contoh: 6 kutub, 1200 rpm → 60 Hz. 4 kutub, 1800 rpm → 60 Hz. 4 kutub, 1500 rpm → 50 Hz.","Tegangan efektif bergantung fluks, frekuensi, dan jumlah belitan.","Kapal umumnya 60 Hz, 440 V (atau 50 Hz, 400 V); verifikasi di SLD."],
+f:["f = P·N/120","E = 4,44·f·Φ·N·kw"],
+k:["Putaran ADG dijaga governor agar frekuensi tetap.","Frekuensi menentukan kecepatan motor induksi seluruh kapal.","Pembacaan Hz di switchboard menunjukkan kondisi mesin penggerak."],
+tr:["Menghitung frekuensi dari rpm dan kutub.","Menjelaskan bentuk gelombang 3 fase."],
+ak:"Latihan hitung f untuk berbagai kutub; simulasi rotor-stator.",as:"Tugas perhitungan",yt:"3 phase alternator animation"},
+{n:15,w:15,t:"Komponen dan Fungsi Generator AC",s:"Rotor, stator, exciter, AVR, penggunaan",q:"marine alternator components rotor stator exciter brushless AVR",wk:"Alternator",
+def:"Alternator kapal terdiri dari stator, rotor, sistem eksitasi, AVR, bantalan, dan kotak terminal, dipasang satu poros dengan mesin diesel.",
+det:["Stator: rangka berlaminasi + belitan 3 fase, keluaran daya.","Rotor kutub menonjol: kumparan medan DC penghasil medan magnet.","Exciter brushless: exciter AC kecil + dioda berputar, tanpa sikat dan slip ring.","AVR membaca tegangan keluaran dan mengatur arus exciter.","Bantalan, kipas/pendingin, space heater (mencegah lembap saat berhenti), terminal box.","Ukur isolasi (megger) sebelum start setelah lama berhenti."],
+f:["IR minimal sesuai manual pabrikan","Diperiksa dengan insulation tester"],
+k:["ADG utama dan emergency generator.","Shaft generator.","Space heater menjaga isolasi belitan saat generator standby."],
+tr:["Menamai dan menjelaskan fungsi komponen pada gambar.","Menyebutkan pemeriksaan keselamatan sebelum pengukuran isolasi."],
+ak:"Identifikasi komponen pada gambar/trainer dan presentasi kelompok.",as:"Praktik identifikasi",yt:"brushless alternator how it works"},
+{n:16,w:16,t:"Generator DC: Definisi dan Prinsip",s:"Armature, medan, komutator",q:"DC generator working principle commutator armature",wk:"Generator arus searah",
+def:"Generator DC mengubah energi mekanik menjadi listrik arus searah; komutator menyearahkan GGL bolak-balik pada armature.",
+det:["Armature berputar dalam medan magnet menghasilkan GGL bolak-balik.","Komutator + sikat menyearahkan menjadi searah.","GGL: E = Φ·Z·N·P/(60·A).","Jenis: penguatan terpisah, shunt, seri, kompound.","Pada kapal modern, DC umumnya berasal dari rectifier dan baterai."],
+f:["E = Φ·Z·N·P/(60·A)"],
+k:["Pengisi baterai 24 V DC untuk alarm, kontrol, dan lampu darurat.","Generator DC lama pada kapal sebelumnya; perlu dikenali di kapal tua.","Sistem start motor diesel darurat."],
+tr:["Menjelaskan fungsi armature, medan, dan komutator.","Membedakan keluaran generator DC dan AC."],
+ak:"Demonstrasi model komutator dan diskusi perbandingan.",as:"Kuis dan worksheet",yt:"DC generator animation commutator"},
+{n:17,w:17,t:"Komponen dan Fungsi Generator DC",s:"Penggunaan dan perbandingan AC vs DC",q:"DC generator components brushes interpole AC vs DC marine battery",wk:"Generator arus searah",
+def:"Komponen utama generator DC: yoke, kutub utama, kumparan medan, interpole, armature, komutator, sikat, dan bantalan.",
+det:["Yoke: rangka dan jalur fluks.","Kutub dan kumparan medan: membentuk medan magnet.","Interpole: mengurangi percikan sikat.","Sikat dan komutator: bagian aus, perlu pemeriksaan berkala.","Baterai kapal: aki timbal-asam atau Ni-Cd; ruang baterai butuh ventilasi (gas hidrogen)."],
+f:["AC: tanpa komutator, daya besar","DC: komutator, perawatan sikat"],
+k:["UPS dan sumber DC untuk sistem navigasi, alarm, dan komunikasi.","Baterai sebagai sumber darurat pada kondisi blackout."],
+tr:["Membandingkan generator AC dan DC dalam tabel.","Menyebutkan aspek keselamatan ruang baterai."],
+ak:"Diskusi kasus: mengapa kapal modern memakai alternator + rectifier. Presentasi kelompok.",as:"Presentasi dan tugas",yt:"marine battery emergency DC supply ship"},
+{n:18,w:18,t:"Ujian Akhir Semester",s:"Evaluasi M8 dan M10–M17",q:"marine generator alternator exam",wk:"Generator listrik",
+def:"Evaluasi terpadu: teori, hitungan, identifikasi komponen, dan studi kasus Shipboard Electrical System.",
+det:["Kisi-kisi per CPMK 1–9.","Soal kasus: gangguan tegangan/frekuensi, blackout, beban berlebih.","Rubrik analisis: gejala, kemungkinan sebab, bukti data, solusi aman."],
+f:["P = √3·V·I·cosφ","f = P·N/120"],k:["Kasus emergency generator dan electrical load balance MV Baabullah."],
+tr:["Mengintegrasikan teori, hitungan, dan aplikasi generator kapal."],ak:"Ujian tertulis dan analisis kasus.",as:"UAS 30%",yt:"ship blackout recovery"}
+];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const a=(h,t,c)=>`<a class="chip ${c||""}" target="_blank" rel="noopener" href="${h}">${t}</a>`;
+const ul=x=>"<ul>"+x.map(i=>`<li>${i}</li>`).join("")+"</ul>";
+$("#cards").innerHTML=M.map((m,i)=>`<button class="card" data-i="${i}"><small>Minggu ${m.w}</small><h3>M${m.n}. ${m.t}</h3><p>${m.s}</p></button>`).join("");
+$("#tbRps tbody").insertAdjacentHTML("beforeend",M.map(m=>`<tr><td>${m.w}</td><td><b>M${m.n}</b> ${m.t}</td><td>${m.tr[0]}</td><td>${m.ak.split(":")[0].split(".")[0]}</td><td>${m.as}</td></tr>`).join(""));
+function openM(i){const m=M[i],l=L(m.wk,m.q);
+$("#pop").innerHTML=`<button class="x" data-close>Tutup</button><h2>M${m.n}. ${m.t}</h2><p>${m.def}</p>
+<h4>Penjelasan detail</h4>${ul(m.det)}<h4>Rumus kunci</h4>${m.f.map(x=>`<div class="f">${x}</div>`).join("")}
+<h4>Fungsi di kapal</h4>${ul(m.k)}<h4>Yang didapat Taruna</h4>${ul(m.tr)}
+<h4>Aktivitas kelas</h4><p>${m.ak}</p><p><b>Penilaian:</b> ${m.as}</p>
+<h4>Belajar lebih lanjut</h4>${a(L(m.yt,m.yt).y,"YouTube","y")}${a(l.g,"Google")}${a(l.w,"Wikipedia ID","w")}${a(l.e,"Wikipedia EN","w")}${a(l.i,"IMO Model Course","i")}${a(l.s,"STCW","i")}${a("https://phet.colorado.edu/en/simulations/category/physics/electricity-magnets-and-circuits","Animasi PhET")}
+<p style="color:var(--mut);font-size:.9rem">Verifikasi spesifikasi aktual MV Baabullah dari manual pabrikan dan SLD sebelum dijadikan data faktual.</p>
+<p><button class="x" style="float:none" data-lp="${i}">Lihat lesson plan modul ini</button></p>`;
+$("#m").classList.add("on")}
+function lp(i){const m=M[i];$("#lpOut").innerHTML=`<div class="box tw"><h3>M${m.n}. ${m.t} · Minggu ${m.w}</h3><p><b>Tujuan:</b> ${m.tr.join("; ")}.</p><table><tr><th>Tahap</th><th>Kegiatan</th><th>Menit</th></tr><tr><td>Pendahuluan</td><td>Apersepsi dari kasus kapal, tujuan, motivasi</td><td>10</td></tr><tr><td>Materi (pedagogi)</td><td>${m.det.slice(0,2).join(" ")}</td><td>35</td></tr><tr><td>Demonstrasi</td><td>Gambar, simulasi, atau trainer terkait ${m.t.toLowerCase()}</td><td>25</td></tr><tr><td>Analisis (andragogi)</td><td>${m.ak}</td><td>30</td></tr><tr><td>Presentasi (heutagogi)</td><td>Kelompok memaparkan analisis dan solusi; umpan balik dosen</td><td>30</td></tr><tr><td>Evaluasi</td><td>${m.as}; refleksi dan kesimpulan</td><td>20</td></tr><tr><th colspan="2">Total</th><th>150</th></tr></table><p><b>Tugas terstruktur:</b> ringkasan 1 halaman + 3 soal latihan. <b>Mandiri:</b> cari satu video/animasi M${m.n}, tulis 3 hal yang dipelajari.</p></div>`}
+$("#selLp").innerHTML=M.map((m,i)=>`<option value="${i}">Minggu ${m.w} · M${m.n} ${m.t}</option>`).join("");
+$("#selLp").onchange=e=>lp(+e.target.value);lp(0);
+const R=["Tujuan sesi jelas dan disampaikan","Isi sesuai capaian dan akurat secara teknis","Memakai media (gambar/alat/simulasi)","Contoh dari kapal nyata","Taruna dilibatkan aktif","Pertanyaan terbuka diajukan","Bahasa dan suara jelas","Waktu terkelola (10 menit)","Ada cek pemahaman","Penutup merangkum dan menindaklanjuti"];
+$("#rub").innerHTML=R.map(r=>`<label class="ck"><input type="checkbox"> ${r}</label>`).join("");
+$("#rub").onchange=()=>$("#sc").textContent=$$("#rub input:checked").length;
+function tab(t){$$(".tab").forEach(e=>e.classList.toggle("on",e.id===t));$$("header [data-t]").forEach(b=>b.classList.toggle("on",b.dataset.t===t));if(location.hash!=="#"+t)history.replaceState(null,"","#"+t);scrollTo(0,0)}
+document.addEventListener("click",e=>{const t=e.target.closest("[data-t]");if(t)return tab(t.dataset.t);
+const c=e.target.closest(".card");if(c)return openM(+c.dataset.i);
+const l=e.target.closest("[data-lp]");if(l){$("#m").classList.remove("on");$("#selLp").value=l.dataset.lp;lp(+l.dataset.lp);return tab("lesson")}
+if(e.target.closest("[data-close]")||e.target.classList.contains("modal"))$$(".modal").forEach(x=>x.classList.remove("on"))});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$$(".modal").forEach(x=>x.classList.remove("on"))});
+$("#cari").onclick=()=>{$("#q").classList.add("on");$("#qi").focus()};
+$("#qi").oninput=e=>{const v=e.target.value.trim();if(!v){$("#qo").innerHTML="";return}const l=L(v,v);$("#qo").innerHTML=a(l.y,"YouTube","y")+a(l.g,"Google")+a(l.w,"Wikipedia ID","w")+a(l.e,"Wikipedia EN","w")+a(l.i,"IMO","i")+a(l.s,"STCW","i")};
+$("#tema").onclick=()=>{const d=document.documentElement,dk=d.dataset.theme?d.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;d.dataset.theme=dk?"light":"dark"};
+const h=location.hash.slice(1);if(h&&document.getElementById(h)&&document.getElementById(h).classList.contains("tab"))tab(h);
+</script>
+</body>
+</html>
